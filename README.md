@@ -36,7 +36,7 @@ Whenever a user’s facial image is given as input, the system automatically ide
 | `Test.csv` | Contains **three unlabeled song samples** used for testing the trained deep learning model. |
 | `Output.csv` | Shows the **output results** when a "happy" image is given as input. |
 | `Happy.jpg`, `Sad.jpg`, `Neutral.jpg` | Sample facial images used to test the **DeepFace emotion recognition**. |
-| `emotion_music_recommender.rvg` | The **Altair AI Studio (RapidMiner)** process file that integrates both the DeepFace and the Deep Learning classification components. |
+| `Project_process.rvg` | The **Altair AI Studio (RapidMiner)** process file that integrates both the DeepFace and the Deep Learning classification components. |
 | `README.md` | This documentation file containing setup, process, and execution details for the judges. |
 
 ---
