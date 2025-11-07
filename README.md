@@ -2,6 +2,12 @@
 
 ---
 
+**Presentation Slides:** [DeepFace Emotion Recommender PPT](https://docs.google.com/presentation/d/1VbB8fmaJVK8R3wNCos3CTGUw8lQuoDFM/edit?usp=sharing&ouid=113307944853143504828&rtpof=true&sd=true)
+
+**Video Link:** [Watch Full Video Here](https://youtu.be/G-pFdPKIv_A)
+
+---
+
 ## 🧠 Project Overview
 
 This project integrates **facial emotion recognition** with **music mood classification** to recommend Spotify songs that match a user’s detected emotion.
@@ -31,7 +37,7 @@ Whenever a user’s facial image is given as input, the system automatically ide
 | `Output.csv` | Shows the **output results** when a "happy" image is given as input. |
 | `Happy.jpg`, `Sad.jpg`, `Neutral.jpg` | Sample facial images used to test the **DeepFace emotion recognition**. |
 | `emotion_music_recommender.rvg` | The **Altair AI Studio (RapidMiner)** process file that integrates both the DeepFace and the Deep Learning classification components. |
-| `README.md` | This documentation file containing setup, process, and execution details. |
+| `README.md` | This documentation file containing setup, process, and execution details for the judges. |
 
 ---
 
