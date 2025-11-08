@@ -132,7 +132,7 @@ The initial labels are simplified: `0 → Sad`, `1 → Happy`, `2 → Energetic`
 | **Environment** | Altair AI Studio (RapidMiner) |
 | **Dataset Used** | `songs.csv` (preprocessed using Turbo Prep) |
 | **Model Type** | Deep Learning Classifier (via Auto Model) |
-| **Best Performing Model** | Random Forest with **79% accuracy** |
+| **Best Performing Model** | Deep Learning Model with 20 epochs |
 | **Overall System Accuracy** | **97.35%** (enhanced by DeepFace precision) |
 
 ### 💾 Example Output Format
