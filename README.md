@@ -34,9 +34,9 @@ Whenever a user’s facial image is given as input, the system automatically ide
 | File Name | Description |
 |:----------|:------------|
 | `278k_labelled_uri.csv` | The original **Kaggle dataset** with 278,000 labeled tracks containing musical and mood attributes. |
-| `songs.csv` | A **refined dataset** derived from the Kaggle dataset, keeping only the essential features for emotion classification. |
-| `Test.csv` | Contains **three unlabeled song samples** used for testing the trained deep learning model. |
-| `Output.csv` | Shows the **output results** when a "happy" image is given as input. |
+| `songs.csv` | A **refined dataset** derived from the Kaggle dataset by Turbo Prep and Auto model, keeping only the essential features for emotion classification. |
+| `Test.csv` | Contains **three unlabeled song samples** used for giving input into the trained deep learning model. |
+| `Output.csv` | Shows the **output results** when an image is given as input. |
 | `Happy.jpg`, `Sad.jpg`, `Neutral.jpg` | Sample facial images used to test the **DeepFace emotion recognition**. |
 | `Project_process.rvg` | The **Altair AI Studio (RapidMiner)** process file that integrates both the DeepFace and the Deep Learning classification components. |
 | `README.md` | This documentation file containing setup, process, and execution details for the judges. |
@@ -81,9 +81,7 @@ This project relies on specific Python library versions to avoid dependency conf
 3.  **Configure Altair AI Studio Python Path:**
     Point the Altair Interpreter to your new environment's executable:
 
-    `Altair Studio → Preferences → Python → Interpreter Path` should be set to:
-    ```
-    C:\Users\YourUser\Path\To\deepface_env\Scripts\python.exe
+    `Altair Studio → Execute Python -> Parameters -> Select Interpretor as 'conda'-> set environment as 'deepenv'
     ```
 
 ---
@@ -91,15 +89,15 @@ This project relies on specific Python library versions to avoid dependency conf
 ## ▶️ How to Run the Project
 
 1.  **Open Altair AI Studio (RapidMiner).**
-2.  **Import the process file:** `File → Import Process → emotion_music_recommender.rvg`.
+2.  **Import the process file:** `File → Import Process → Project_process.rvg`.
 3.  Ensure all required datasets (`songs.csv`, `Test.csv`, `Output.csv`) and image files (`Happy.jpg`, `Sad.jpg`, `Neutral.jpg`) are stored **in the same directory** as the `.rvg` file.
-4.  Open the **`Create ExampleSet`** operator and point it to one of the test images (`Happy.jpg`, `Sad.jpg`, or `Neutral.jpg`).
+4.  Open the **`Create ExampleSet`** operator and point it to one of the test images (`Happy.jpg`or `Sad.jpg`, or `Neutral.jpg`).
 5.  Click the **Run button** in Altair to execute the workflow.
 
 ### 🧠 System Execution Flow
 
 1.  **🖼️ Image Input** → Provided through `Create ExampleSet`.
-2.  **🔍 Emotion Detection** → **DeepFace** identifies facial emotion (happy, sad, neutral) inside the `Execute Python` block.
+2.  **🔍 Emotion Detection** → **DeepFace** identifies facial emotion (happy, sad, neutral) inside the `Execute Python` operator.
 3.  **🎶 Song Classification** → Deep Learning model predicts the mood category of each song.
 4.  **🔗 Join Operation** → Combines detected emotion with classified songs.
 5.  **🎧 Output Display** → Shows the emotion and corresponding Spotify track link.
@@ -114,9 +112,9 @@ The Kaggle dataset used contains detailed audio features such as:
 
 | Feature | Description |
 |:--------|:------------|
-| **Danceability** | How suitable the track is for dancing (0–1). |
+| **Danceability** | How suitable the track is for dancing  |
 | **Energy** | Perceptual measure of intensity and activity. |
-| **Loudness** | Overall volume in decibels (dB). |
+| **Loudness** | Overall volume in decibels |
 | **Acousticness** | Confidence measure of whether a track is acoustic. |
 | **Instrumentalness** | Likelihood that the track contains no vocals. |
 | **Valence** | Positiveness of the song’s mood. |
@@ -153,7 +151,7 @@ The final output is joined and formatted for readability:
 * **🧘 Therapeutic Assistant** — Plays calm or joyful tracks for stress relief.
 
 ### Conclusion
-The Emotion-Based Music Recommendation System demonstrates how AI and Deep Learning can merge to interpret human emotion and provide a personalized music experience. With a total system accuracy of **97.35%**, the project bridges the gap between human emotion and technology—turning facial expressions into melodies. **"The system doesn’t just play music—it understands you."**
+The Emotion-Based Music Recommendation System demonstrates how AI and Deep Learning can merge to interpret human emotion and provide a personalized music experience. With a total system accuracy of **97.35%**, the project bridges the gap between human emotion and technology—turning facial expressions into melodies. **"The system doesn’t just play music, it understands you."**
 
 ---
 
